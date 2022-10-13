@@ -14,7 +14,7 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
     if (response.status >= 200 && response.status < 300) {
       return response
     } else {
-      throw new Error(response.statusText)
+      throw response.statusText
     }
   }
   
@@ -22,8 +22,9 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
     return response.json()
   }
   
-  const server = () => {
-    fetch('/.netlify/functions/yotpo-auth')
+  const injectCustomerPortal = () => {
+    // fetch('/.netlify/functions/yotpo-auth')
+    fetch('https://courageous-frangollo-f4e785.netlify.app/.netlify/functions/yotpo-auth')
     .then(checkStatus)
     .then(parseJSON)
     .then(json => {
@@ -62,7 +63,7 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
       </Helmet>
-      { server() }
+      { injectCustomerPortal() }
       <div>kenig</div>
       <Header />
       <main

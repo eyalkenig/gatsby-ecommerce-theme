@@ -26,10 +26,9 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
       </Helmet>
-      <div>kenig</div>
       <Header />
       <main
-        className={`${styles.main} inject-here ${
+        className={`${styles.main} ${
           disablePaddingBottom === true ? styles.disablePaddingBottom : ''
         }`}
       >

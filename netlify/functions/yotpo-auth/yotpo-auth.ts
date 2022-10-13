@@ -3,8 +3,8 @@ import { Handler } from '@netlify/functions'
 import sha256 from 'crypto-js/sha256';
 
 export const handler: Handler = async (event, context) => {
-  const storeId = 'qkh5rzpFMqKn6r9wrsXjQIRYUOsBxEGxvitr0w4v'
-  const customerId = '5969778737217'
+  const storeId = 'wx9IWNA5p6OzC0sgplopct1TYR8LDYavio93sJBT'
+  const customerId = '5430766141741'
   const tokenSecret = 'ZNDzLhi5IwqwzK10gLUti92ZRjDl5h3w'
   const email = 'ekenig+1@yotpo.com'
   const sentAt = '2022/10/13 11:26:19'

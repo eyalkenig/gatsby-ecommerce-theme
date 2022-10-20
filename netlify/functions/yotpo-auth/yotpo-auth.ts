@@ -7,7 +7,7 @@ export const handler: Handler = async (event, context) => {
   const customerId = '5430766141741'
   const tokenSecret = 'ZNDzLhi5IwqwzK10gLUti92ZRjDl5h3w'
   const email = 'ekenig+1@yotpo.com'
-  const sentAt = '2022/10/13 11:26:19'
+  const sentAt = '2023/10/13 11:26:19'
   const toSign = `${storeId}_${customerId}_${tokenSecret}_${sentAt}`
   const token = sha256(toSign)
   return {

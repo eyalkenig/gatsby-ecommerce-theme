@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 
 import AttributeGrid from '../components/AttributeGrid';
 import Container from '../components/Container';
@@ -60,7 +60,9 @@ const IndexPage = () => {
       document.head.appendChild(loader)
     })
   }
-  injectCustomerPortal()
+  useEffect(()=> {
+    injectCustomerPortal()
+  })
 
   return (
     <Layout disablePaddingBottom>

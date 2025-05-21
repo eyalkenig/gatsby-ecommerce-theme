@@ -58,6 +58,16 @@ const IndexPage = () => {
       loader.setAttribute('src', 'https://cdn-widgetsrepository.yotpo.com/v1/loader/wx9IWNA5p6OzC0sgplopct1TYR8LDYavio93sJBT')
       loader.setAttribute('async', 'true')
       document.head.appendChild(loader)
+
+      const referralsPlaceholder = document.createElement('div')
+      referralsPlaceholder.setAttribute('class', 'yotpo-widget-instance')
+      referralsPlaceholder.setAttribute('data-yotpo-instance-id', '848444')
+      document.body.appendChild(referralsPlaceholder)
+
+      const referralsLoader = document.createElement('script')
+      referralsLoader.setAttribute('src', 'https://cdn-widgetsrepository.yotpo.com/v1/loader/MNVy8a3PJkKXLgnBTiS-RA')
+      referralsLoader.setAttribute('async', 'true')
+      document.head.appendChild(referralsLoader)
     })
   }
   useEffect(()=> {
@@ -75,6 +85,15 @@ const IndexPage = () => {
         ctaText={'shop now'}
         ctaAction={goToShop}
       />
+      <div
+        id="swell-customer-identification"
+        data-authenticated="true"
+        data-email="ekenig+test1@yotpo.com"
+        data-id="7352890982469"
+        data-token="9e495f1315a72d9fe9168ce9660af1349fcfc3a8bfe27b01d9175fd45ca7923c"
+        data-tags="[]"
+        style="display:none;">
+      </div>
       <div class="inject-here"></div>
       {/* Message Container */}
       <div className={styles.messageContainer}>
